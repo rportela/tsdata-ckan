@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import CkanPackage from "./CkanPackage";
 
 export default class CkanApi {
   url: string;
@@ -23,5 +24,11 @@ export default class CkanApi {
 
   listGroups(): Promise<string[]> {
     return this.get("group_list");
+  }
+
+  getPackage(id: string): Promise<CkanPackage> {
+    return this.get("package_show?id=" + encodeURIComponent(id)).then(
+      (json) => new CkanPackage(json)
+    );
   }
 }
