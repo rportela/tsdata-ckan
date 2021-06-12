@@ -1,4 +1,4 @@
-export default class CkanOrganization {
+export interface CkanOrganization {
   id: string;
   name: string;
   title: string;

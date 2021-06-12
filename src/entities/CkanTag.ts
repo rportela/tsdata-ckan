@@ -1,4 +1,4 @@
-export default class CkanTag {
+export interface CkanTag {
   display_name: string;
   id: string;
   name: string;

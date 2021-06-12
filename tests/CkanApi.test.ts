@@ -1,4 +1,4 @@
-import CkanApi from "../src/CkanApi";
+import CkanApi from "../src/services/CkanApi";
 
 const ckan: CkanApi = new CkanApi("https://demo.ckan.org");
 
@@ -16,5 +16,8 @@ describe("CKAN API Tests", function () {
   });
   it("Should list groups", async function () {
     expectValidArray(await ckan.listGroups());
+  });
+  it("Should list packages with resources", async function () {
+    expectValidArray(await ckan.currentPackagesAndResources());
   });
 });

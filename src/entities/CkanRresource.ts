@@ -1,4 +1,4 @@
-export default class CkanResource {
+export interface CkanResource {
   cache_last_updated: string;
   cache_url: string;
   created: string;
