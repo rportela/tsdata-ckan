@@ -6,7 +6,7 @@ import { CkanPackage } from "../entities";
  * https://docs.ckan.org/en/2.9/api/#module-ckan.logic.action.get
  *
  */
-export default class CkanApi {
+export class CkanApi {
   url: string;
   constructor(urlBase: string) {
     if (!urlBase.endsWith("/")) urlBase += "/";
