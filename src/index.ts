@@ -1,2 +1,4 @@
-export * from "./entities";
-export * from "./services";
+import { CkanApi } from "./CkanApi";
+export * from "./types";
+
+export default CkanApi;

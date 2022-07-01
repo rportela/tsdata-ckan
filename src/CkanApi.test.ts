@@ -1,4 +1,4 @@
-import CkanApi from "../src/services/CkanApi";
+import { CkanApi } from "./CkanApi";
 
 const ckan: CkanApi = new CkanApi("https://demo.ckan.org");
 
